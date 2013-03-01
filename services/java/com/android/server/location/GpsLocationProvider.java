@@ -1083,6 +1083,7 @@ public class GpsLocationProvider implements LocationProviderInterface {
                 mLocation.setLatitude(Taint.addTaintDouble(latitude, tag));
                 mLocation.setLongitude(Taint.addTaintDouble(longitude, tag));
                 mLocation.setTime(timestamp);
+								Taint.log("SESAME INGRESS <LAT,LON>: <" + latitude + "," + longitude + ">");
             }
             if ((flags & LOCATION_HAS_ALTITUDE) == LOCATION_HAS_ALTITUDE) {
                 mLocation.setAltitude(Taint.addTaintDouble(altitude, tag));
